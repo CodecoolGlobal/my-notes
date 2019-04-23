@@ -21,7 +21,7 @@ export default class Notes {
 
     showAllNotes() {
         let noteRef = firebase.database().ref('notes/');
-
+        const that = this;///????
 
         noteRef.on('value', function (data){
 
@@ -48,11 +48,8 @@ export default class Notes {
                     title.textContent = 'Title';
                     text.appendChild(title);
 
-                    let titleContent = document.createElement('textarea');
-                    titleContent.setAttribute('class', 'title');
-                    titleContent.setAttribute('rows', '1');
-                    titleContent.setAttribute('cols', '20');
-                    titleContent.setAttribute('data-id', data.key);
+
+                    let titleContent = that.addAttribute('title', '1', '20', data.key);
                     titleContent.textContent = note.title;
                     text.appendChild(titleContent);
 
@@ -60,11 +57,7 @@ export default class Notes {
                     content.textContent = 'Some information';
                     text.appendChild(content);
 
-                    let noteContent = document.createElement('textarea');
-                    noteContent.setAttribute('class', 'note');
-                    noteContent.setAttribute('data-id', data.key);
-                    noteContent.setAttribute('rows', '8');
-                    noteContent.setAttribute('cols', '20');
+                    let noteContent = that.addAttribute('note', '8', '20', data.key);
                     noteContent.textContent = note.note;
                     text.appendChild(noteContent);
 
@@ -80,6 +73,15 @@ export default class Notes {
             });
 
         }.bind(this));
+    }
+
+    addAttribute(textareaClass, numberOfRows, numberOfColumns, key) {
+        let noteContent = document.createElement('textarea');
+        noteContent.setAttribute('class', textareaClass);
+        noteContent.setAttribute('rows', numberOfRows);
+        noteContent.setAttribute('cols', numberOfColumns);
+        noteContent.setAttribute('data-id', key);
+        return noteContent;
     }
 
     clearTextAreaOfNote() {
