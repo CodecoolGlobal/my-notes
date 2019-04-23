@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="description" content="Assignment of the Second Self Instructed week"/>
+    <meta name="author" content="Tatiana Slonimskaia"/>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1"/>
+    <title>MyNotes Project</title>
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <!--Header-->
+
+    <header>
+        <div class="flex-container-header">
+            <div>Notes Project</div>
+            <div><a href = "#">Home</a></div>
+        </div>
+
+    </header>
+
+    <section>
+
+        <div class="flex-container-notes">
+
+            <div class="note-form-container">
+
+                <div class = "flex-container-content">
+
+                    <p>Title</p>
+
+                    <textarea id="title" class="area" rows="1" cols="20"></textarea>
+
+                    <p>Some information</p>
+
+                    <textarea id="note-content" class="area" rows="8" cols="20"></textarea>
+
+                </div>
+
+
+                <div class="flex-container-buttons">
+
+                    <button id="save">Save</button>
+                    <button id="clear">Clear</button>
+
+                </div>
+
+            </div>
+
+            <div id="flex-container-all-notes"></div>
+
+        </div>
+
+    </section>
+
+    <!--Footer-->
+
+    <footer>
+
+        <p>Copyright &copy; 2019 Notes Project</p>
+
+    </footer>
+
+</body>
+<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-messaging.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-functions.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-storage.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyB_3cjhdKKWAVhodBtkaFmk_EJmT92IAfM",
+        authDomain: "mynotesproject-dbec4.firebaseapp.com",
+        databaseURL: "https://mynotesproject-dbec4.firebaseio.com",
+        projectId: "mynotesproject-dbec4",
+        storageBucket: "mynotesproject-dbec4.appspot.com",
+        messagingSenderId: "888127721041"
+    };
+    firebase.initializeApp(config);
+</script>
+    <script type="module" src="scripts/application.js"></script>
+</html>

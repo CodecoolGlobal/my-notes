@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*
+========================================
+Links
+========================================
+*/
+
+a {
+    text-decoration:none;
+}
+
+/*
+========================================
+Header
+========================================
+*/
+
+.flex-container-header {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+header {
+    background: #833852;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px;
+
+}
+
+header a {
+    color: #fff;
+}
+
+/*
+========================================
+The whole content of the page
+========================================
+*/
+
+.flex-container-notes {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+/*
+========================================
+Main Form for Notes on the left side
+========================================
+*/
+
+.note-form-container {
+    margin: 10px 10px 45px 20px;
+    border: 2px solid #692e43;
+    box-shadow:
+            0 4px 8px 0 rgba(0, 0, 0, 0.2),
+            0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.note-form-container {
+    height: 300px;
+    width: 250px;
+    background-color: rgba(105, 46, 67, 0.21);
+    border-radius: 5px;
+}
+
+.flex-container-content p {
+    margin: 5px 16px;
+    font-size: 20px;
+    color:  #692e43;
+}
+
+/* Text area */
+
+textarea {
+    border: 2px solid #692e43;
+    margin: 0px 16px;
+    padding: 7px;
+    border-radius: 5px;
+    background-color: rgba(105, 46, 67, 0.26);
+    color: #692e43;
+}
+
+
+/* Buttons */
+
+.flex-container-buttons {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 6px;
+    margin: 10px 0 0 16px;
+    border-radius: 8px;
+    background: -webkit-linear-gradient(top, #9b4261, #c7527b);
+    border: 1px solid #444;
+    box-shadow: 0px 1px 1px #888 inset, 1px 1px 3px #222222;
+    color: #fff;
+    text-decoration: none;
+    font-family: arial;
+}
+
+button a {
+    color: #fff;
+}
+
+button:hover {
+    background: #c7527b;
+}
+
+button:active {
+    background: #9b4261;
+}
+
+
+/*
+========================================
+List of Notes on the right side
+========================================
+*/
+#flex-container-all-notes {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+}
+/*
+========================================
+Footer
+========================================
+*/
+
+footer {
+    width: 100%;
+    background-color: #86455c;
+    position: fixed;
+    bottom: 0px;
+}
+
+footer p {
+    margin: 12px;
+    color: #fff;
+    font: 14px arial;
+    text-align: center;
+}
